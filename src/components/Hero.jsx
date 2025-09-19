@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion as Motion } from "framer-motion";
 import { ShieldCheck, CheckCircle2, Building2, Users, Bot, Globe2, Lock, ArrowRight } from "lucide-react"; // <--- CORREÇÃO AQUI
 
 export function Hero() {
@@ -8,7 +8,7 @@ export function Hero() {
             <div className="absolute inset-0" style={{ background: `linear-gradient(120deg, ${colors.brandYellow} 0%, #fff 60%)` }} />
             <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
-                    <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
+                    <Motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
                         <p className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-slate-600">
                             <ShieldCheck className="w-4 h-4" /> Confiança • Seriedade • Segurança
                         </p>
@@ -34,8 +34,8 @@ export function Hero() {
                                 </div>
                             ))}
                         </div>
-                    </motion.div>
-                    <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }}>
+                    </Motion.div>
+                    <Motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }}>
                         <div className="relative bg-white rounded-3xl shadow-xl p-6 sm:p-8 border border-black/5">
                             <div className="flex items-center gap-3">
                                 <div className="p-3 rounded-2xl" style={{ background: colors.brandGreen }}>
@@ -60,7 +60,7 @@ export function Hero() {
                                 ))}
                             </div>
                         </div>
-                    </motion.div>
+                    </Motion.div>
                 </div>
             </div>
         </section>

@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 import { BadgeCheck, Sparkles } from "lucide-react";
 
 // Você pode mover este componente para seu próprio arquivo: src/components/SectionTitle.jsx
@@ -31,13 +31,13 @@ export function Servicos() {
                 <SectionTitle eyebrow="O que fazemos" title="Serviços que geram valor" subtitle="Entrega excelente com seriedade, segurança e proximidade." />
                 <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {items.map((it) => (
-                        <motion.div key={it.title} whileHover={{ y: -4 }} className="p-6 rounded-3xl border border-slate-200 shadow-sm bg-white">
+                        <Motion.div key={it.title} whileHover={{ y: -4 }} className="p-6 rounded-3xl border border-slate-200 shadow-sm bg-white">
                             <h3 className="text-lg font-bold text-slate-900">{it.title}</h3>
                             <p className="mt-2 text-slate-600">{it.desc}</p>
                             <div className="mt-4 inline-flex items-center gap-2 text-slate-900 font-semibold">
                                 <BadgeCheck className="w-4 h-4" /> Confiança garantida
                             </div>
-                        </motion.div>
+                        </Motion.div>
                     ))}
                 </div>
             </div>
